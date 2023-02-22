@@ -1,10 +1,10 @@
 import * as R from 'ramda';
 
-import { InstantiatedConfig } from '../config-types';
-import { InterfacePropertyDeclaration } from '../declaration-types';
-import TypeImport from '../TypeImport';
-import { CompositeDetails, CompositeProperty } from './composite-types';
-import resolveType from './resolveType';
+import { InstantiatedConfig } from '../config-types.js';
+import { InterfacePropertyDeclaration } from '../declaration-types.js';
+import TypeImport from '../TypeImport.js';
+import { CompositeDetails, CompositeProperty } from './composite-types.js';
+import resolveType from './resolveType.js';
 
 const generateProperties = <D extends CompositeDetails>(
   details: D,

@@ -1,6 +1,6 @@
 {
   "name": "kanel",
-  "version": "3.2.0",
+  "version": "4.0.0-alpha",
   "keywords": [
     "postgresql",
     "schema",
@@ -28,8 +28,13 @@
     "build/",
     "bin/"
   ],
+  "type": "module",
+  "exports": {
+    "types": "./build/index.d.ts",
+    "import": "./build/index.js"
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "test": "vitest run",
     "version": "yarn build"
   },
@@ -46,7 +51,9 @@
   },
   "devDependencies": {
     "@types/ramda": "0.28.23",
-    "np": "7.6.3"
+    "np": "7.6.3",
+    "typescript": "^4.9.5",
+    "vitest": "^0.28.5"
   },
   "np": {}
 }

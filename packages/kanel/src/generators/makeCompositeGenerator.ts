@@ -1,11 +1,11 @@
 import { Kind, Schema } from 'extract-pg-schema';
 import { tryParse } from 'tagged-comment-parser';
 
-import { InstantiatedConfig } from '../config-types';
-import { Declaration, InterfaceDeclaration } from '../declaration-types';
-import Output, { Path } from '../Output';
-import { CompositeDetails } from './composite-types';
-import generateProperties from './generateProperties';
+import { InstantiatedConfig } from '../config-types.js';
+import { Declaration, InterfaceDeclaration } from '../declaration-types.js';
+import Output, { Path } from '../Output.js';
+import { CompositeDetails } from './composite-types.js';
+import generateProperties from './generateProperties.js';
 
 const makeMapper =
   <D extends CompositeDetails>(config: InstantiatedConfig) =>

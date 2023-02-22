@@ -1,4 +1,4 @@
-import TypeImport from './TypeImport';
+import TypeImport from './TypeImport.js';
 
 /**
  * A type definition can either be a string representing a builtin type,

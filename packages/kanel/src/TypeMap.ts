@@ -1,4 +1,4 @@
-import TypeDefinition from './TypeDefinition';
+import TypeDefinition from './TypeDefinition.js';
 
 type TypeMap = Record<string, TypeDefinition>;
 

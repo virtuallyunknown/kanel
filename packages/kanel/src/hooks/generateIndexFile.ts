@@ -1,8 +1,8 @@
 import { join, relative, sep } from 'path';
 
-import { PreRenderHook } from '../config-types';
-import Details from '../Details';
-import { FileContents } from '../Output';
+import { PreRenderHook } from '../config-types.js';
+import Details from '../Details.js';
+import { FileContents } from '../Output.js';
 
 const generateIndexFile: PreRenderHook = (outputAcc, instantiatedConfig) => {
   const allEntities: Details[] = Object.values(

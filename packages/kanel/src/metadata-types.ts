@@ -1,13 +1,13 @@
 import { TableColumn, TableDetails } from 'extract-pg-schema';
 
-import { InstantiatedConfig } from './config-types';
-import { TypeDeclaration } from './declaration-types';
-import Details from './Details';
+import { InstantiatedConfig } from './config-types.js';
+import { TypeDeclaration } from './declaration-types.js';
+import Details from './Details.js';
 import {
   CompositeDetails,
   CompositeProperty,
-} from './generators/composite-types';
-import TypeDefinition from './TypeDefinition';
+} from './generators/composite-types.js';
+import TypeDefinition from './TypeDefinition.js';
 
 export type TypeMetadata = {
   name: string;

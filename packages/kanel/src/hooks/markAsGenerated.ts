@@ -1,4 +1,4 @@
-import { PostRenderHook } from '../config-types';
+import { PostRenderHook } from '../config-types.js';
 
 const markAsGenerated: PostRenderHook = (
   _path,

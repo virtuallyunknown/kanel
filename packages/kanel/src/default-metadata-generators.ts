@@ -3,13 +3,13 @@ import { TableColumn } from 'extract-pg-schema';
 import { join } from 'path';
 import { tryParse } from 'tagged-comment-parser';
 
-import { CompositeProperty } from './generators/composite-types';
-import resolveType from './generators/resolveType';
+import { CompositeProperty } from './generators/composite-types.js';
+import resolveType from './generators/resolveType.js';
 import {
   GenerateIdentifierType,
   GetMetadata,
   GetPropertyMetadata,
-} from './metadata-types';
+} from './metadata-types.js';
 
 const toPascalCase = recase(null, 'pascal');
 

@@ -1,23 +1,24 @@
-import { extractSchemas } from 'extract-pg-schema';
+import extractPgSchema from 'extract-pg-schema';
+const { extractSchemas } = extractPgSchema;
 import rmfr from 'rmfr';
 
-import { Config, InstantiatedConfig, PreRenderHook } from './config-types';
+import { Config, InstantiatedConfig, PreRenderHook } from './config-types.js';
 import {
   defaultGenerateIdentifierType,
   defaultGetMetadata,
   defaultGetPropertyMetadata,
   defaultPropertySortFunction,
-} from './default-metadata-generators';
-import defaultTypeMap from './defaultTypeMap';
-import makeCompositeGenerator from './generators/makeCompositeGenerator';
-import makeDomainsGenerator from './generators/makeDomainsGenerator';
-import makeEnumsGenerator from './generators/makeEnumsGenerator';
-import makeRangesGenerator from './generators/makeRangesGenerator';
-import markAsGenerated from './hooks/markAsGenerated';
-import Output from './Output';
-import render from './render';
-import TypeMap from './TypeMap';
-import writeFile from './writeFile';
+} from './default-metadata-generators.js';
+import defaultTypeMap from './defaultTypeMap.js';
+import makeCompositeGenerator from './generators/makeCompositeGenerator.js';
+import makeDomainsGenerator from './generators/makeDomainsGenerator.js';
+import makeEnumsGenerator from './generators/makeEnumsGenerator.js';
+import makeRangesGenerator from './generators/makeRangesGenerator.js';
+import markAsGenerated from './hooks/markAsGenerated.js';
+import Output from './Output.js';
+import render from './render.js';
+import TypeMap from './TypeMap.js';
+import writeFile from './writeFile.js';
 
 type Progress = {
   onProgressStart?: (total: number) => void;

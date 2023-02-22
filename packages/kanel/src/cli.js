@@ -4,7 +4,7 @@ import fs from 'fs';
 import optionator from 'optionator';
 import path from 'path';
 
-import processDatabase from './processDatabase';
+import processDatabase from './processDatabase.js';
 // @ts-ignore
 const { version } = require('../package.json');
 
@@ -70,7 +70,7 @@ async function main() {
     process.exit(0);
   }
 
-  /** @type {import('./config-types').Config} */
+  /** @type {import('./config-types.js').Config} */
   let config;
   const configFile = path.join(process.cwd(), options.config || '.kanelrc.js');
   if (

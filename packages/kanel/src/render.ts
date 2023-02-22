@@ -1,6 +1,6 @@
-import { Declaration } from './declaration-types';
-import escapeName from './escapeName';
-import ImportGenerator from './importGenerator';
+import { Declaration } from './declaration-types.js';
+import escapeName from './escapeName.js';
+import ImportGenerator from './importGenerator.js';
 
 const processComments = (
   comments: string[] | undefined,
@@ -62,8 +62,7 @@ const processDeclaration = (
       const { exportAs, name, base, properties, comment } = declaration;
       declarationLines.push(...(processComments(comment, 0) || []));
       declarationLines.push(
-        `export${exportAs === 'default' ? ' default' : ''} interface ${name}${
-          base ? ` extends ${base}` : ''
+        `export${exportAs === 'default' ? ' default' : ''} interface ${name}${base ? ` extends ${base}` : ''
         } {`
       );
       properties.forEach((property, index) => {
@@ -72,10 +71,8 @@ const processDeclaration = (
         }
         declarationLines.push(...(processComments(property.comment, 2) || []));
         declarationLines.push(
-          `  ${escapeName(property.name)}${property.isOptional ? '?' : ''}: ${
-            property.typeName
-          }${'[]'.repeat(property.dimensions)}${
-            property.isNullable ? ' | null' : ''
+          `  ${escapeName(property.name)}${property.isOptional ? '?' : ''}: ${property.typeName
+          }${'[]'.repeat(property.dimensions)}${property.isNullable ? ' | null' : ''
           };`
         );
         if (property.typeImports) {

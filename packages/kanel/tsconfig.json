@@ -1,9 +1,13 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./build" /* Redirect output structure to the directory. */,
-    "rootDir": "./src" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */,
-    "noEmit": false
+    "outDir": "./build" /* Redirect output structure to the directory. */ ,
+    "rootDir": "./src" /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */ ,
+    "noEmit": false,
+
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "target": "ESNext"
   },
   "include": ["src"]
 }

@@ -9,10 +9,10 @@ import {
 } from 'extract-pg-schema';
 import { tryParse } from 'tagged-comment-parser';
 
-import { InstantiatedConfig } from '../config-types';
-import Details from '../Details';
-import TypeDefinition from '../TypeDefinition';
-import { CompositeDetails, CompositeProperty } from './composite-types';
+import { InstantiatedConfig } from '../config-types.js';
+import Details from '../Details.js';
+import TypeDefinition from '../TypeDefinition.js';
+import { CompositeDetails, CompositeProperty } from './composite-types.js';
 
 const resolveTypeFromComment = (
   comment: string | undefined

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
-import { Declaration } from './declaration-types';
-import render from './render';
+import { Declaration } from './declaration-types.js';
+import render from './render.js';
 
 describe('processGenerationSetup', () => {
   it('should process a type declaration', () => {

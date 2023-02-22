@@ -1,6 +1,6 @@
 import path from 'path';
 
-import TypeImport from './TypeImport';
+import TypeImport from './TypeImport.js';
 
 type ImportSet = {
   default?: string;

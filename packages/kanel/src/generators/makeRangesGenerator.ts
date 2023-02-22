@@ -1,11 +1,11 @@
 import { RangeDetails, Schema } from 'extract-pg-schema';
 import { tryParse } from 'tagged-comment-parser';
 
-import { InstantiatedConfig } from '../config-types';
-import { Declaration, TypeDeclaration } from '../declaration-types';
-import Output, { Path } from '../Output';
-import TypeDefinition from '../TypeDefinition';
-import TypeImport from '../TypeImport';
+import { InstantiatedConfig } from '../config-types.js';
+import { Declaration, TypeDeclaration } from '../declaration-types.js';
+import Output, { Path } from '../Output.js';
+import TypeDefinition from '../TypeDefinition.js';
+import TypeImport from '../TypeImport.js';
 
 const makeMapper =
   (config: InstantiatedConfig) =>

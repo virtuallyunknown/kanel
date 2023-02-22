@@ -1,14 +1,14 @@
 import { EnumDetails, Schema } from 'extract-pg-schema';
 import { tryParse } from 'tagged-comment-parser';
 
-import { InstantiatedConfig } from '../config-types';
+import { InstantiatedConfig } from '../config-types.js';
 import {
   Declaration,
   GenericDeclaration,
   TypeDeclaration,
-} from '../declaration-types';
-import escapeName from '../escapeName';
-import Output, { Path } from '../Output';
+} from '../declaration-types.js';
+import escapeName from '../escapeName.js';
+import Output, { Path } from '../Output.js';
 
 type EnumStyle = 'enum' | 'type';
 
